@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ICFES Digital Saber 11 - Entrenamiento con IA</title>
+
+  <!-- OPEN GRAPH PARA FACEBOOK, WHATSAPP, TELEGRAM Y LINKEDIN -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ICFES Digital Saber 11 - Entrenamiento con IA" />
+  <meta property="og:description" content="¿Quieres subir tu puntaje ICFES? Prepárate con simulacros, IA, Notebook LM e informe inteligente. Prueba el acceso completo por 3 días." />
+  <meta property="og:image" content="https://lh3.googleusercontent.com/sitesv/AA5AbUB-y5H9NSYS9CUmIcHqI9PO7umY7Co5OxceZtICdHv5WfCSgd9l4eYW7ao3F_Hh7o4W1hIMsqms7QJr6H7nfKlopS3YqU0auXbwjctSTCkHf2iDi-HlE-ZbfQ0caTtKdD5HXn2OwmNssOul1Xm5jHXiHvS550b-OerVUamouvODDWaQj0rDDLsMp-A=w1280" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="1280" />
+  <meta property="og:url" content="URL_DE_ESTA_PAGINA_COMPARTIBLE" />
+
+  <!-- TWITTER / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ICFES Digital Saber 11 - Entrenamiento con IA" />
+  <meta name="twitter:description" content="Prepárate para el ICFES Saber 11 con una experiencia digital del futuro." />
+  <meta name="twitter:image" content="https://lh3.googleusercontent.com/sitesv/AA5AbUB-y5H9NSYS9CUmIcHqI9PO7umY7Co5OxceZtICdHv5WfCSgd9l4eYW7ao3F_Hh7o4W1hIMsqms7QJr6H7nfKlopS3YqU0auXbwjctSTCkHf2iDi-HlE-ZbfQ0caTtKdD5HXn2OwmNssOul1Xm5jHXiHvS550b-OerVUamouvODDWaQj0rDDLsMp-A=w1280" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top, #18245f, #050816 65%);
+      color: #ffffff;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 720px;
+      background: linear-gradient(135deg, #07142f, #101b45, #431c7a);
+      border-radius: 26px;
+      padding: 22px;
+      text-align: center;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.38);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .hero-image {
+      width: 100%;
+      border-radius: 18px;
+      display: block;
+      margin-bottom: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 1.7rem;
+      line-height: 1.25;
+    }
+
+    .copy {
+      white-space: pre-line;
+      color: #dbeafe;
+      font-size: 1rem;
+      line-height: 1.55;
+      margin: 0 0 20px;
+    }
+
+    .main-btn {
+      display: block;
+      width: 100%;
+      border: none;
+      text-decoration: none;
+      cursor: pointer;
+      padding: 16px 22px;
+      border-radius: 999px;
+      font-size: 1.08rem;
+      font-weight: 900;
+      color: #ffffff;
+      background: linear-gradient(90deg, #00c2ff, #7c3aed, #ec4899);
+      box-shadow: 0 10px 24px rgba(124, 58, 237, 0.45);
+      margin-bottom: 14px;
+    }
+
+    .share-btn {
+      width: 100%;
+      border: none;
+      cursor: pointer;
+      padding: 14px 20px;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 800;
+      color: #101827;
+      background: #facc15;
+      margin-bottom: 14px;
+    }
+
+    .share-panel {
+      display: none;
+      margin-top: 16px;
+    }
+
+    .share-panel.active {
+      display: block;
+    }
+
+    .share-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .social-btn,
+    .social-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 46px;
+      padding: 12px;
+      border-radius: 14px;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 800;
+      border: none;
+      cursor: pointer;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.92rem;
+    }
+
+    .whatsapp { background: #25d366; }
+    .facebook { background: #1877f2; }
+    .twitter { background: #111827; }
+    .telegram { background: #229ed9; }
+    .linkedin { background: #0a66c2; }
+    .gmail { background: #c5221f; }
+    .copy-btn { background: #facc15; color: #101827; grid-column: 1 / -1; }
+
+    .message {
+      display: none;
+      margin-top: 12px;
+      padding: 10px;
+      border-radius: 12px;
+      background: rgba(34, 197, 94, 0.16);
+      color: #bbf7d0;
+      font-weight: 800;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .message.active {
+      display: block;
+    }
+
+    @media (max-width: 520px) {
+      .card {
+        padding: 16px;
+        border-radius: 20px;
+      }
+
+      h1 {
+        font-size: 1.28rem;
+      }
+
+      .copy {
+        font-size: 0.92rem;
+      }
+
+      .share-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .copy-btn {
+        grid-column: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="page">
+    <section class="card">
+      <img
+        class="hero-image"
+        src="https://lh3.googleusercontent.com/sitesv/AA5AbUB-y5H9NSYS9CUmIcHqI9PO7umY7Co5OxceZtICdHv5WfCSgd9l4eYW7ao3F_Hh7o4W1hIMsqms7QJr6H7nfKlopS3YqU0auXbwjctSTCkHf2iDi-HlE-ZbfQ0caTtKdD5HXn2OwmNssOul1Xm5jHXiHvS550b-OerVUamouvODDWaQj0rDDLsMp-A=w1280"
+        alt="ICFES Digital Saber 11"
+      />
+
+      <h1>ICFES Digital Saber 11</h1>
+
+      <p id="copyText" class="copy"></p>
+
+      <a
+        class="main-btn"
+        href="https://sites.google.com/iemanueljbetancur.edu.co/entrenador-icfes-con-ia/inicio"
+        target="_blank"
+        rel="noopener"
+      >
+        OBTENER ACCESO
+      </a>
+
+      <button class="share-btn" onclick="showSharePanel()">
+        Compartir ahora
+      </button>
+
+      <div id="sharePanel" class="share-panel">
+        <div class="share-grid">
+          <a id="whatsappBtn" class="social-btn whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+          <a id="facebookBtn" class="social-btn facebook" target="_blank" rel="noopener">Facebook</a>
+          <a id="twitterBtn" class="social-btn twitter" target="_blank" rel="noopener">X / Twitter</a>
+          <a id="telegramBtn" class="social-btn telegram" target="_blank" rel="noopener">Telegram</a>
+          <a id="linkedinBtn" class="social-btn linkedin" target="_blank" rel="noopener">LinkedIn</a>
+          <a id="gmailBtn" class="social-btn gmail" target="_blank" rel="noopener">Gmail</a>
+
+          <button class="social-button copy-btn" onclick="copyMessage()">
+            Copiar copy + enlace
+          </button>
+        </div>
+
+        <div id="message" class="message"></div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    /*
+      IMPORTANTE:
+      1. Sube este archivo como página pública.
+      2. Reemplaza URL_DE_ESTA_PAGINA_COMPARTIBLE por la URL pública real de esta página.
+      3. Esa URL pública es la que debes compartir en Facebook, WhatsApp, Telegram y LinkedIn.
+    */
+
+    const destinoFinal = "https://sites.google.com/iemanueljbetancur.edu.co/entrenador-icfes-con-ia/inicio";
+
+    /*
+      Cambia esta URL después de publicar este archivo.
+      Ejemplo:
+      const paginaCompartible = "https://tusuario.github.io/icfes-digital/";
+    */
+    const paginaCompartible = "URL_DE_ESTA_PAGINA_COMPARTIBLE";
+
+    const copy =
+`¿Quieres subir tu puntaje ICFES un +90%? 📈
+Mira cómo nuestro entrenamiento con I.A te ayuda a mejorar en cada materia.
+Prepárate de forma inteligente y transforma tu mañana.
+¡Prueba el acceso COMPLETO por 3 días hoy mismo!
+
+OBTENER ACCESO:
+${destinoFinal}`;
+
+    document.getElementById("copyText").textContent = copy;
+
+    const encodedCopy = encodeURIComponent(copy);
+    const encodedSharePage = encodeURIComponent(paginaCompartible);
+    const encodedSubject = encodeURIComponent("ICFES Digital Saber 11 - Entrenamiento con IA");
+
+    document.getElementById("whatsappBtn").href =
+      "https://api.whatsapp.com/send?text=" + encodedCopy;
+
+    document.getElementById("facebookBtn").href =
+      "https://www.facebook.com/sharer/sharer.php?u=" + encodedSharePage;
+
+    document.getElementById("twitterBtn").href =
+      "https://twitter.com/intent/tweet?text=" + encodedCopy + "&url=" + encodedSharePage;
+
+    document.getElementById("telegramBtn").href =
+      "https://t.me/share/url?url=" + encodedSharePage + "&text=" + encodedCopy;
+
+    document.getElementById("linkedinBtn").href =
+      "https://www.linkedin.com/sharing/share-offsite/?url=" + encodedSharePage;
+
+    document.getElementById("gmailBtn").href =
+      "https://mail.google.com/mail/?view=cm&fs=1&su=" + encodedSubject + "&body=" + encodedCopy;
+
+    function showSharePanel() {
+      document.getElementById("sharePanel").classList.add("active");
+    }
+
+    async function copyMessage() {
+      const message = document.getElementById("message");
+
+      try {
+        await navigator.clipboard.writeText(copy);
+        message.textContent = "Copy y enlace copiados. En Facebook, pega el texto en la publicación.";
+      } catch (error) {
+        message.textContent = "No se pudo copiar automáticamente. Copia el texto manualmente desde la pantalla.";
+      }
+
+      message.classList.add("active");
+
+      setTimeout(() => {
+        message.classList.remove("active");
+      }, 4500);
+    }
+  </script>
+
+</body>
+</html>
