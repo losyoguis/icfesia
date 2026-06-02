@@ -8,18 +8,22 @@
 
   <!-- OPEN GRAPH PARA FACEBOOK, WHATSAPP, TELEGRAM Y LINKEDIN -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ICFES Digital Saber 11" />
+  <meta property="og:locale" content="es_CO" />
+  <meta property="og:url" content="https://losyoguis.github.io/icfesia/" />
   <meta property="og:title" content="ICFES Digital Saber 11 - Entrenamiento con IA" />
-  <meta property="og:description" content="¿Quieres subir tu puntaje ICFES? Prepárate con simulacros, IA, Notebook LM e informe inteligente. Prueba el acceso completo por 3 días." />
-  <meta property="og:image" content="https://lh3.googleusercontent.com/sitesv/AA5AbUB-y5H9NSYS9CUmIcHqI9PO7umY7Co5OxceZtICdHv5WfCSgd9l4eYW7ao3F_Hh7o4W1hIMsqms7QJr6H7nfKlopS3YqU0auXbwjctSTCkHf2iDi-HlE-ZbfQ0caTtKdD5HXn2OwmNssOul1Xm5jHXiHvS550b-OerVUamouvODDWaQj0rDDLsMp-A=w1280" />
+  <meta property="og:description" content="¿Quieres subir tu puntaje ICFES? Mira cómo nuestro entrenamiento con I.A. te ayuda a mejorar en cada materia. Prueba el acceso completo por 3 días." />
+  <meta property="og:image" content="https://losyoguis.github.io/icfesia/ESTUDIANTE.png" />
+  <meta property="og:image:secure_url" content="https://losyoguis.github.io/icfesia/ESTUDIANTE.png" />
+  <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="1280" />
-  <meta property="og:url" content="URL_DE_ESTA_PAGINA_COMPARTIBLE" />
 
-  <!-- TWITTER / X -->
+  <!-- X / TWITTER -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ICFES Digital Saber 11 - Entrenamiento con IA" />
   <meta name="twitter:description" content="Prepárate para el ICFES Saber 11 con una experiencia digital del futuro." />
-  <meta name="twitter:image" content="https://lh3.googleusercontent.com/sitesv/AA5AbUB-y5H9NSYS9CUmIcHqI9PO7umY7Co5OxceZtICdHv5WfCSgd9l4eYW7ao3F_Hh7o4W1hIMsqms7QJr6H7nfKlopS3YqU0auXbwjctSTCkHf2iDi-HlE-ZbfQ0caTtKdD5HXn2OwmNssOul1Xm5jHXiHvS550b-OerVUamouvODDWaQj0rDDLsMp-A=w1280" />
+  <meta name="twitter:image" content="https://losyoguis.github.io/icfesia/ESTUDIANTE.png" />
 
   <style>
     * {
@@ -38,12 +42,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 18px;
     }
 
     .card {
       width: 100%;
-      max-width: 720px;
+      max-width: 760px;
       background: linear-gradient(135deg, #07142f, #101b45, #431c7a);
       border-radius: 26px;
       padding: 22px;
@@ -62,7 +66,7 @@
 
     h1 {
       margin: 0 0 10px;
-      font-size: 1.7rem;
+      font-size: 1.8rem;
       line-height: 1.25;
     }
 
@@ -72,12 +76,16 @@
       font-size: 1rem;
       line-height: 1.55;
       margin: 0 0 20px;
+      text-align: left;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 16px;
+      border-radius: 16px;
     }
 
     .main-btn {
       display: block;
       width: 100%;
-      border: none;
       text-decoration: none;
       cursor: pointer;
       padding: 16px 22px;
@@ -141,7 +149,12 @@
     .telegram { background: #229ed9; }
     .linkedin { background: #0a66c2; }
     .gmail { background: #c5221f; }
-    .copy-btn { background: #facc15; color: #101827; grid-column: 1 / -1; }
+
+    .copy-btn {
+      background: #facc15;
+      color: #101827;
+      grid-column: 1 / -1;
+    }
 
     .message {
       display: none;
@@ -188,9 +201,10 @@
 
   <main class="page">
     <section class="card">
+
       <img
         class="hero-image"
-        src="https://lh3.googleusercontent.com/sitesv/AA5AbUB-y5H9NSYS9CUmIcHqI9PO7umY7Co5OxceZtICdHv5WfCSgd9l4eYW7ao3F_Hh7o4W1hIMsqms7QJr6H7nfKlopS3YqU0auXbwjctSTCkHf2iDi-HlE-ZbfQ0caTtKdD5HXn2OwmNssOul1Xm5jHXiHvS550b-OerVUamouvODDWaQj0rDDLsMp-A=w1280"
+        src="https://losyoguis.github.io/icfesia/ESTUDIANTE.png"
         alt="ICFES Digital Saber 11"
       />
 
@@ -213,16 +227,35 @@
 
       <div id="sharePanel" class="share-panel">
         <div class="share-grid">
-          <a id="whatsappBtn" class="social-btn whatsapp" target="_blank" rel="noopener">WhatsApp</a>
-          <a id="facebookBtn" class="social-btn facebook" target="_blank" rel="noopener">Facebook</a>
-          <a id="twitterBtn" class="social-btn twitter" target="_blank" rel="noopener">X / Twitter</a>
-          <a id="telegramBtn" class="social-btn telegram" target="_blank" rel="noopener">Telegram</a>
-          <a id="linkedinBtn" class="social-btn linkedin" target="_blank" rel="noopener">LinkedIn</a>
-          <a id="gmailBtn" class="social-btn gmail" target="_blank" rel="noopener">Gmail</a>
+
+          <a id="whatsappBtn" class="social-btn whatsapp" target="_blank" rel="noopener">
+            WhatsApp
+          </a>
+
+          <button class="social-button facebook" onclick="shareFacebook()">
+            Facebook
+          </button>
+
+          <a id="twitterBtn" class="social-btn twitter" target="_blank" rel="noopener">
+            X / Twitter
+          </a>
+
+          <a id="telegramBtn" class="social-btn telegram" target="_blank" rel="noopener">
+            Telegram
+          </a>
+
+          <a id="linkedinBtn" class="social-btn linkedin" target="_blank" rel="noopener">
+            LinkedIn
+          </a>
+
+          <a id="gmailBtn" class="social-btn gmail" target="_blank" rel="noopener">
+            Gmail
+          </a>
 
           <button class="social-button copy-btn" onclick="copyMessage()">
             Copiar copy + enlace
           </button>
+
         </div>
 
         <div id="message" class="message"></div>
@@ -231,21 +264,8 @@
   </main>
 
   <script>
-    /*
-      IMPORTANTE:
-      1. Sube este archivo como página pública.
-      2. Reemplaza URL_DE_ESTA_PAGINA_COMPARTIBLE por la URL pública real de esta página.
-      3. Esa URL pública es la que debes compartir en Facebook, WhatsApp, Telegram y LinkedIn.
-    */
-
     const destinoFinal = "https://sites.google.com/iemanueljbetancur.edu.co/entrenador-icfes-con-ia/inicio";
-
-    /*
-      Cambia esta URL después de publicar este archivo.
-      Ejemplo:
-      const paginaCompartible = "https://tusuario.github.io/icfes-digital/";
-    */
-    const paginaCompartible = "URL_DE_ESTA_PAGINA_COMPARTIBLE";
+    const paginaCompartible = "https://losyoguis.github.io/icfesia/";
 
     const copy =
 `¿Quieres subir tu puntaje ICFES un +90%? 📈
@@ -264,9 +284,6 @@ ${destinoFinal}`;
 
     document.getElementById("whatsappBtn").href =
       "https://api.whatsapp.com/send?text=" + encodedCopy;
-
-    document.getElementById("facebookBtn").href =
-      "https://www.facebook.com/sharer/sharer.php?u=" + encodedSharePage;
 
     document.getElementById("twitterBtn").href =
       "https://twitter.com/intent/tweet?text=" + encodedCopy + "&url=" + encodedSharePage;
@@ -289,9 +306,9 @@ ${destinoFinal}`;
 
       try {
         await navigator.clipboard.writeText(copy);
-        message.textContent = "Copy y enlace copiados. En Facebook, pega el texto en la publicación.";
+        message.textContent = "Copy y enlace copiados correctamente.";
       } catch (error) {
-        message.textContent = "No se pudo copiar automáticamente. Copia el texto manualmente desde la pantalla.";
+        message.textContent = "No se pudo copiar automáticamente. Copia el texto manualmente.";
       }
 
       message.classList.add("active");
@@ -299,6 +316,24 @@ ${destinoFinal}`;
       setTimeout(() => {
         message.classList.remove("active");
       }, 4500);
+    }
+
+    async function shareFacebook() {
+      const message = document.getElementById("message");
+
+      try {
+        await navigator.clipboard.writeText(copy);
+        message.textContent = "Copy copiado. En Facebook, pégalo en el cuadro de publicación.";
+        message.classList.add("active");
+      } catch (error) {
+        message.textContent = "Facebook no permite insertar el copy automáticamente. Copia el texto desde la página.";
+        message.classList.add("active");
+      }
+
+      const facebookUrl =
+        "https://www.facebook.com/sharer/sharer.php?u=" + encodedSharePage;
+
+      window.open(facebookUrl, "_blank", "width=700,height=650");
     }
   </script>
 
